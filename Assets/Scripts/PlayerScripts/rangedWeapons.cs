@@ -3,9 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class rangedWeapons : MonoBehaviour
-{
+{   
+    public GameObject firePoint;
     public GameObject bulletGO;
+    public BulletPickup bulletPack;
     public float lifeTime = 3.0f;
+    public float cooldownTime = 2.0f;
+    private float direction = 1.0f;
+    private float currentCountdown = 0.0f;
     // Start is called before the first frame update
     void Start()
     { 
@@ -14,11 +19,25 @@ public class rangedWeapons : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         if (Input.GetMouseButtonDown(0))
-         Fire();
+        currentCountdown -= Time.deltaTime;
+        if (Input.GetAxis("Horizontal") > 0.0f)
+        {
+            direction = 1.0f;
+             transform.eulerAngles = new Vector3(0, 0, 0);
+        }
+         if (Input.GetAxis("Horizontal") < 0.0f)
+        {
+            direction = -1.0f;
+            transform.eulerAngles = new Vector3(0, 180, 0);
+        }
+         if (Input.GetMouseButton(0) && bulletPack.bullets > 0 && currentCountdown <= 0.0f)
+            Fire();
     }
     private void Fire()
     {
-       Instantiate(bulletGO, transform); 
+        currentCountdown = cooldownTime;
+       bulletPack.bullets -= 1;
+       GameObject bullet = Instantiate(bulletGO, firePoint.transform.position, firePoint.transform.rotation); 
+       bullet.GetComponent<Bullet>().direction = direction;
     }
 }
