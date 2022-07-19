@@ -4,6 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Door
+  - DestructableDoor
+  - OpenableDoor
   - Ground
   layers:
   - Default

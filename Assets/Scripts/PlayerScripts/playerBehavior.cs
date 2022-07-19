@@ -39,4 +39,14 @@ public class playerBehavior : MonoBehaviour
             }
         }
     }
+    /*
+    void OnTriggerEnter2D(Collider2D collider) //Camera shake when hit?
+    {
+        if (collider.gameObject.CompareTag("Enemy"))
+        {
+            
+        }
+    }
+     */
+
 }
