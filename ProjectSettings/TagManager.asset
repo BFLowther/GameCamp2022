@@ -9,6 +9,7 @@ TagManager:
   - OpenableDoor
   - Ground
   - Enemy
+  - Bullet
   layers:
   - Default
   - TransparentFX
