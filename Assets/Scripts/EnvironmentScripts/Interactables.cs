@@ -34,7 +34,10 @@ public class Interactables : MonoBehaviour
            
             if(gameObject.tag == "OpenableDoor")
             {
+                if (gameObject.transform.position.y <= 0)
                     anim.Play("DoorOpen");
+                else
+                    anim.Play("DoorClose");
             }
 
         }

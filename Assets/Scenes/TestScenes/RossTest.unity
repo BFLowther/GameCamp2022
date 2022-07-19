@@ -312,7 +312,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -374,6 +374,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.23082057
       objectReference: {fileID: 0}
+    - target: {fileID: 3529372659196777230, guid: c96baf3ad3aa0574fab2435fa58a4566, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3529372659196777231, guid: c96baf3ad3aa0574fab2435fa58a4566, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -384,7 +388,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3529372659196777231, guid: c96baf3ad3aa0574fab2435fa58a4566, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.39
+      value: -3.11
       objectReference: {fileID: 0}
     - target: {fileID: 3529372659196777231, guid: c96baf3ad3aa0574fab2435fa58a4566, type: 3}
       propertyPath: m_LocalPosition.z
@@ -549,6 +553,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DestructableDoor
       objectReference: {fileID: 0}
+    - target: {fileID: 7513259869240850706, guid: 6fb8f0462acd9224d915500892dd5ad0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7513259869240850710, guid: 6fb8f0462acd9224d915500892dd5ad0, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -606,6 +614,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OpenableDoor
       objectReference: {fileID: 0}
+    - target: {fileID: 8463100532534481358, guid: 6b94cfba319249a4ebc02174cc706d99, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8463100532534481362, guid: 6b94cfba319249a4ebc02174cc706d99, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -616,7 +628,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8463100532534481362, guid: 6b94cfba319249a4ebc02174cc706d99, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.8366983
+      value: -2.96
       objectReference: {fileID: 0}
     - target: {fileID: 8463100532534481362, guid: 6b94cfba319249a4ebc02174cc706d99, type: 3}
       propertyPath: m_LocalPosition.z
