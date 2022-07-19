@@ -23,7 +23,8 @@ public class BulletPickup : MonoBehaviour
         if (other.gameObject.CompareTag("Bullet"))
         {
             bullets += bulletCase;
-            Debug.Log(bullets);
+            other.transform.gameObject.SetActive(false);
+            other.gameObject.tag = "Untagged";
             Destroy(other.gameObject);
         }
     }
