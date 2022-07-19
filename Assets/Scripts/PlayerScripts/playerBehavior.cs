@@ -21,17 +21,22 @@ public class playerBehavior : MonoBehaviour
     }
     void OnTriggerStay2D(Collider2D collider) //Makes character leave the ground.
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (collider.gameObject.CompareTag("Ground"))
         {
-            body.velocity = new Vector2(body.velocity.x, body.velocity.y + 1);
+            if (Input.GetKey(KeyCode.Space))
+            {
+                body.velocity = new Vector2(body.velocity.x, body.velocity.y + 1);
+            }
         }
     }
     void OnTriggerExit2D(Collider2D collider) //Executes the jump.
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (collider.gameObject.CompareTag("Ground"))
         {
-            body.velocity = new Vector2(body.velocity.x, body.velocity.y + jump);
+            if (Input.GetKey(KeyCode.Space))
+            {
+                body.velocity = new Vector2(body.velocity.x, body.velocity.y + jump);
+            }
         }
     }
-
 }
