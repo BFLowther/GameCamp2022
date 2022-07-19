@@ -5,10 +5,12 @@ using UnityEngine;
 public class Interactables : MonoBehaviour
 {
     public Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
         Debug.Log("Door works");
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -32,9 +34,9 @@ public class Interactables : MonoBehaviour
            
             if(gameObject.tag == "OpenableDoor")
             {
-                anim.Play("DoorOpen");
+                    anim.Play("DoorOpen");
             }
-          
+
         }
         
     }
