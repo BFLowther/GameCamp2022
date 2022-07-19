@@ -8,6 +8,7 @@ TagManager:
   - DestructableDoor
   - OpenableDoor
   - Ground
+  - Enemy
   - Bullet
   layers:
   - Default
