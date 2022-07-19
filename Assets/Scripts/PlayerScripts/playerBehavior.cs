@@ -13,11 +13,23 @@ public class playerBehavior : MonoBehaviour
 
     public float jump = 3;
 
+    public float health = 3;
+
+    public bool isFacingRight;
+
+    private object player;
+
     // Update is called once per frame
     void Update()
     {
         body.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, body.velocity.y); //Horizontal movement.
+        isFacingRight = (Input.GetAxis("Horizontal") > 0.0f);
 
+        if (health == 0)
+        {
+            Debug.Log("Die");
+            Destroy(gameObject);
+        }
     }
     void OnTriggerStay2D(Collider2D collider) //Makes character leave the ground.
     {
@@ -37,6 +49,13 @@ public class playerBehavior : MonoBehaviour
             {
                 body.velocity = new Vector2(body.velocity.x, body.velocity.y + jump);
             }
+        }
+    }
+    void OnTriggerEnter2D(Collider2D collider) //Executes the jump.
+    {
+        if (collider.gameObject.CompareTag("Enemy"))
+        {
+            health = health - 1;
         }
     }
     /*
