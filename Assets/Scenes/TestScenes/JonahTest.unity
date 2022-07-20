@@ -1000,6 +1000,10 @@ PrefabInstance:
       propertyPath: cooldownTime
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2169343521693829719, guid: c96baf3ad3aa0574fab2435fa58a4566, type: 3}
+      propertyPath: hideFlashPercent
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3529372658606465237, guid: c96baf3ad3aa0574fab2435fa58a4566, type: 3}
       propertyPath: m_Enabled
       value: 1
