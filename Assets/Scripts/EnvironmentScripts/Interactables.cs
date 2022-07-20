@@ -5,10 +5,12 @@ using UnityEngine;
 public class Interactables : MonoBehaviour
 {
     public Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
         Debug.Log("Door works");
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -20,22 +22,24 @@ public class Interactables : MonoBehaviour
     void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
-            Debug.Log("Trigger active");
-        if (Input.GetKey(KeyCode.E))
         {
-            
-            if (gameObject.tag == "DestructableDoor")
+            Debug.Log("Trigger active");
+
+            if (Input.GetKey(KeyCode.E) || Input.GetKey(KeyCode.JoystickButton3))
             {
-                Debug.Log("Door still works");
-                gameObject.SetActive(false);
+                if (gameObject.tag == "DestructableDoor")
+                {
+                    Debug.Log("Door still works");
+                    gameObject.SetActive(false);
+                }
+
+                if (gameObject.tag == "OpenableDoor")
+                {
+                    anim.Play("DoorOpen");
+
+                }
+
             }
-           
-            if(gameObject.tag == "OpenableDoor")
-            {
-                anim.Play("DoorOpen");
-            }
-          
-        }
-        
+        }        
     }
 }

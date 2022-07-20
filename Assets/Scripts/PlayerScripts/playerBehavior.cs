@@ -62,7 +62,7 @@ public class playerBehavior : MonoBehaviour
     {
         if (collider.gameObject.CompareTag("Ground"))
         {
-            if (Input.GetKey(KeyCode.Space))
+            if (Input.GetAxis("Jump") > 0.0f)
             {
                 body.velocity = new Vector2(body.velocity.x, body.velocity.y + 1);
             }
@@ -72,7 +72,7 @@ public class playerBehavior : MonoBehaviour
     {
         if (collider.gameObject.CompareTag("Ground"))
         {
-            if (Input.GetKey(KeyCode.Space))
+            if (Input.GetAxis("Jump") > 0.0f)
             {
                 body.velocity = new Vector2(body.velocity.x, body.velocity.y + jump);
             }
