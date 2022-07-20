@@ -8,6 +8,7 @@ public class StartScript : MonoBehaviour
 
     Scene scene;
     public Animator anim;
+    public GameObject optionsMenu;
     
     void Start()
     {
@@ -30,6 +31,11 @@ public class StartScript : MonoBehaviour
         //Quit The Game
         Application.Quit();
         Debug.Log("It Quit!");
+    }
+
+    public void optionsBack()
+    {    
+        optionsMenu.SetActive(false);
     }
 
     IEnumerator ExampleCoroutine()
