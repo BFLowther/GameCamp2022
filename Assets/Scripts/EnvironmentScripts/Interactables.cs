@@ -22,25 +22,24 @@ public class Interactables : MonoBehaviour
     void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
-            Debug.Log("Trigger active");
-        if (Input.GetKey(KeyCode.E))
         {
-            
-            if (gameObject.tag == "DestructableDoor")
-            {
-                Debug.Log("Door still works");
-                gameObject.SetActive(false);
-            }
-           
-            if(gameObject.tag == "OpenableDoor")
-            {
-                if (gameObject.transform.position.y <= 0)
-                    anim.Play("DoorOpen");
-                else
-                    anim.Play("DoorClose");
-            }
+            Debug.Log("Trigger active");
 
-        }
-        
+            if (Input.GetKey(KeyCode.E) || Input.GetKey(KeyCode.JoystickButton3))
+            {
+                if (gameObject.tag == "DestructableDoor")
+                {
+                    Debug.Log("Door still works");
+                    gameObject.SetActive(false);
+                }
+
+                if (gameObject.tag == "OpenableDoor")
+                {
+                    anim.Play("DoorOpen");
+
+                }
+
+            }
+        }        
     }
 }
