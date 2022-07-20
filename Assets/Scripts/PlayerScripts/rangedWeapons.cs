@@ -30,7 +30,7 @@ public class rangedWeapons : MonoBehaviour
             direction = -1.0f;
             transform.eulerAngles = new Vector3(0, 180, 0);
         }
-         if (Input.GetMouseButton(0) && bulletPack.bullets > 0 && currentCountdown <= 0.0f)
+         if (Input.GetAxis("Fire1") > 0.0f && bulletPack.bullets > 0 && currentCountdown <= 0.0f)
             Fire();
     }
     private void Fire()
