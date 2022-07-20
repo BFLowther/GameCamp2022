@@ -15,20 +15,47 @@ public class playerBehavior : MonoBehaviour
 
     public float health = 3;
 
+    public float characterDirection;
+
     public bool isFacingRight;
 
+    public GameObject obstacleRayObject;
+
     private object player;
+
+    public float obstacleRayDistance;
 
     // Update is called once per frame
     void Update()
     {
         body.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, body.velocity.y); //Horizontal movement.
-        isFacingRight = (Input.GetAxis("Horizontal") > 0.0f);
+        isFacingRight = (Input.GetAxis("Horizontal") > 0.0f); //Facing left or right based on movement.
 
-        if (health == 0)
+        if (isFacingRight == true)
+        {
+            characterDirection = -1f;
+        } else
+        {
+            characterDirection = 1;
+        }
+
+        if (health == 0) //You die if you reach 0 health.
         {
             Debug.Log("Die");
             Destroy(gameObject);
+        }
+
+        RaycastHit2D hitObstacle = Physics2D.Raycast(obstacleRayObject.transform.position, Vector2.right * new Vector2(characterDirection,0f), obstacleRayDistance);
+
+        if (hitObstacle.collider != null)
+        {
+            Debug.Log("Hitting!");
+            Debug.DrawRay(obstacleRayObject.transform.position, Vector2.right * hitObstacle.distance * new Vector2(characterDirection, 0f), Color.red);
+        }
+        else
+        {
+            Debug.Log("Not Hitting!");
+            Debug.DrawRay(obstacleRayObject.transform.position, Vector2.right * hitObstacle.distance * new Vector2(characterDirection, 0f), Color.green);
         }
     }
     void OnTriggerStay2D(Collider2D collider) //Makes character leave the ground.
