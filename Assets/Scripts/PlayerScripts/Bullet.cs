@@ -21,5 +21,7 @@ public class Bullet : MonoBehaviour
     {
         //Debug.Log(col.gameObject.name + " : " + gameObject.name + " : " + Time.time);
         // TODO (Jonah) : deal damage
+        if(col.gameObject.tag == "Enemy")
+            col.gameObject.GetComponent<Health>().Damage(damage);
     }
 }
