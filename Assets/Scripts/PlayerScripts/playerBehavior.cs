@@ -19,24 +19,32 @@ public class playerBehavior : MonoBehaviour
 
     public bool isFacingRight;
 
-    public GameObject obstacleRayObject;
+    public GameObject obstacleRayObjectLeft;
+    public GameObject obstacleRayObjectRight;
+    private GameObject obstacleRayObject;
 
     private object player;
 
-    public float obstacleRayDistance;
+    public float obstacleRayDistance = 0;
 
-    // Update is called once per frame
+    private void Awake()
+    {
+        obstacleRayObject = obstacleRayObjectRight;
+    }
     void Update()
     {
+        
+        //Debug.DrawRay(transform.position, forward, Color.green);
         body.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, body.velocity.y); //Horizontal movement.
-        isFacingRight = (Input.GetAxis("Horizontal") > 0.0f); //Facing left or right based on movement.
-
-        if (isFacingRight == true)
+        if (Input.GetAxis("Horizontal") > 0.0f)
         {
-            characterDirection = -1f;
-        } else
+            characterDirection = 1.0f;
+            obstacleRayObject = obstacleRayObjectRight;
+        }
+        if (Input.GetAxis("Horizontal") < 0.0f)
         {
-            characterDirection = 1;
+            characterDirection = -1.0f;
+            obstacleRayObject = obstacleRayObjectLeft;
         }
 
         if (health == 0) //You die if you reach 0 health.
@@ -45,18 +53,26 @@ public class playerBehavior : MonoBehaviour
             Destroy(gameObject);
         }
 
-        RaycastHit2D hitObstacle = Physics2D.Raycast(obstacleRayObject.transform.position, Vector2.right * new Vector2(characterDirection,0f), obstacleRayDistance);
+        Vector3 hitPos = new Vector3(
+            (0.1f * characterDirection) + obstacleRayObject.transform.position.x,
+            obstacleRayObject.transform.position.y,
+            obstacleRayObject.transform.position.z
+           );
+
+        RaycastHit2D hitObstacle = Physics2D.Raycast(hitPos, Vector2.right * new Vector2(characterDirection,0f), obstacleRayDistance);
 
         if (hitObstacle.collider != null)
         {
-            Debug.Log("Hitting!");
-            Debug.DrawRay(obstacleRayObject.transform.position, Vector2.right * hitObstacle.distance * new Vector2(characterDirection, 0f), Color.red);
+            if (hitObstacle.collider.gameObject.CompareTag("Ground")) 
+            {
+                body.velocity = new Vector2(0, body.velocity.y);
+                Debug.Log("Hitting!");
+                //Debug.Log(hitPos);
+                Debug.DrawRay(hitPos, Vector2.right * hitObstacle.distance * new Vector2(characterDirection, 0f), Color.red);
+            }
+            
         }
-        else
-        {
-            Debug.Log("Not Hitting!");
-            Debug.DrawRay(obstacleRayObject.transform.position, Vector2.right * hitObstacle.distance * new Vector2(characterDirection, 0f), Color.green);
-        }
+
     }
     void OnTriggerStay2D(Collider2D collider) //Makes character leave the ground.
     {

@@ -37,6 +37,9 @@ public class rangedWeapons : MonoBehaviour
         }
          if (Input.GetAxis("Fire1") > 0.0f && bulletPack.bullets > 0 && currentCountdown <= 0.0f)
             Fire();
+
+        if (Input.GetAxis("Fire2") > 0.0f)
+            Fire();
     }
     private void Fire()
     {
