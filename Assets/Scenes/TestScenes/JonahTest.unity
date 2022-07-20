@@ -565,11 +565,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5844674421698725641, guid: 89ca693c74f08a4419c27fb28f139ad1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.676418
+      value: 5.76
       objectReference: {fileID: 0}
     - target: {fileID: 5844674421698725641, guid: 89ca693c74f08a4419c27fb28f139ad1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.527247
+      value: -3.69
       objectReference: {fileID: 0}
     - target: {fileID: 5844674421698725641, guid: 89ca693c74f08a4419c27fb28f139ad1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -615,6 +615,10 @@ PrefabInstance:
       propertyPath: startPos
       value: 
       objectReference: {fileID: 959379562}
+    - target: {fileID: 5844674421698725645, guid: 89ca693c74f08a4419c27fb28f139ad1, type: 3}
+      propertyPath: speedOfEnemy
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89ca693c74f08a4419c27fb28f139ad1, type: 3}
 --- !u!1001 &804057736
