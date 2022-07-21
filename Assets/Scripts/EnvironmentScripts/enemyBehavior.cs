@@ -10,7 +10,7 @@ public class enemyBehavior : MonoBehaviour
     public float speedOfEnemy = 1;
     Vector3 nextPos;
     private Vector3 lastPosition;
-    //public SpriteRenderer spriteRenderer;
+    public SpriteRenderer spriteRenderer;
 
     // Start is called before the first frame update
     void Start()

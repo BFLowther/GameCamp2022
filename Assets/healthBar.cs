@@ -17,15 +17,17 @@ public class healthBar : MonoBehaviour
         slider.value = health;
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Transform target;
 
-    // Update is called once per frame
-    void Update()
+    public float smoothSpeed = 0.125f;
+
+    public Vector3 offset;
+
+    void LateUpdate() //happens after update to not compete with movement
     {
-        
+        transform.position = target.position + offset;
+
     }
+    
+
 }
