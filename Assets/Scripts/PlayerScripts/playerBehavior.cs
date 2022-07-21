@@ -40,7 +40,9 @@ public class playerBehavior : MonoBehaviour
       void Start()
     {
         currentHealth = maxHealth;
-        HealthBar.SetMaxHealth(maxHealth);
+
+        if (HealthBar)
+            HealthBar.SetMaxHealth(maxHealth);
     }
     private void Awake()
     {
@@ -117,7 +119,8 @@ public class playerBehavior : MonoBehaviour
         {
             currentHealth = currentHealth - 1;
             //cameraShake.Shake();
-            HealthBar.SetHealth(currentHealth);
+            if (HealthBar)
+                HealthBar.SetHealth(currentHealth);
         }
     }
  

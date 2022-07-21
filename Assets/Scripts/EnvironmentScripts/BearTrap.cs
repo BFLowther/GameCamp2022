@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class BearTrap : MonoBehaviour
 {
-    
-    public GameObject Player;
     [HideInInspector]
     public playerBehavior pb;
     [HideInInspector]
@@ -16,8 +14,6 @@ public class BearTrap : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        pb = Player.GetComponent<playerBehavior>();
-        rigi = Player.GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
 
@@ -33,8 +29,6 @@ public class BearTrap : MonoBehaviour
         rigi.constraints = RigidbodyConstraints2D.None;
         rigi.constraints = RigidbodyConstraints2D.FreezeRotation;
         Debug.Log("Finished Coroutine at timestamp : " + Time.time);
-
-        
         //Open trap
     }
 
@@ -43,13 +37,14 @@ public class BearTrap : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             //Close trap
+            pb = other.gameObject.GetComponent<playerBehavior>();
+            rigi = other.gameObject.GetComponent<Rigidbody2D>();
             pb.currentHealth -= 1;
             anim.Play("BearTrap");
             rigi.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
             StartCoroutine(Trapped());
+            if (pb.currentHealth == 0)
+                SceneManager.LoadScene("Ross2");
         }
-        
-        if (pb.currentHealth == 0)
-            SceneManager.LoadScene("Ross2");
     }
 }
