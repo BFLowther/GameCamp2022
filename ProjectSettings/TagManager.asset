@@ -10,6 +10,7 @@ TagManager:
   - Ground
   - Enemy
   - Bullet
+  - potion
   layers:
   - Default
   - TransparentFX
@@ -44,6 +45,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: background
+    uniqueID: 2179200439
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

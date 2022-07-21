@@ -8,12 +8,12 @@ public class Bullet : MonoBehaviour
     public float direction = 1;
     public float speed = 20; 
     public float lifeTime = 3.0f;
-    public Rigidbody2D rigidbody2D;
+    public Rigidbody2D bullet;
     // Start is called before the first frame update
     void Start()
     {
-        rigidbody2D = GetComponent<Rigidbody2D>();
-        rigidbody2D.velocity = new Vector2(direction*speed, 0);
+        bullet = GetComponent<Rigidbody2D>();
+        bullet.velocity = new Vector2(direction*speed, 0);
         Destroy(gameObject, lifeTime);    
     }
    
