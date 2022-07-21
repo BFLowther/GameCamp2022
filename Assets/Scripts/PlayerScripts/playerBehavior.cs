@@ -7,13 +7,14 @@ public class playerBehavior : MonoBehaviour
 
     public Rigidbody2D body;
     // Start is called before the first frame update
-    void Start()
-    { }
+  
     public float speed = 7;
 
     public float jump = 3;
 
-    public float health = 3;
+    public int maxHealth = 10;
+
+    public int currentHealth;
 
     public float characterDirection;
 
@@ -25,10 +26,22 @@ public class playerBehavior : MonoBehaviour
     public GameObject obstacleRayObjectRight;
     private GameObject obstacleRayObject;
 
+    public cameraShake cameraShake;
+
     private object player;
 
     public float obstacleRayDistance = 0;
 
+    public healthBar HealthBar;
+
+    
+
+
+      void Start()
+    {
+        currentHealth = maxHealth;
+        HealthBar.SetMaxHealth(maxHealth);
+    }
     private void Awake()
     {
         obstacleRayObject = obstacleRayObjectRight;
@@ -50,7 +63,7 @@ public class playerBehavior : MonoBehaviour
             obstacleRayObject = obstacleRayObjectLeft;
         }
 
-        if (health == 0) //You die if you reach 0 health.
+        if (currentHealth <= 0) //You die if you reach 0 health.
         {
             Debug.Log("Die");
             Destroy(gameObject);
@@ -86,6 +99,7 @@ public class playerBehavior : MonoBehaviour
                 body.velocity = new Vector2(body.velocity.x, body.velocity.y + 1);
             }
         }
+        
     }
     void OnTriggerExit2D(Collider2D collider) //Executes the jump.
     {
@@ -97,21 +111,14 @@ public class playerBehavior : MonoBehaviour
             }
         }
     }
-    void OnTriggerEnter2D(Collider2D collider) //Executes the jump.
+    void OnTriggerEnter2D(Collider2D collider) //You get hit if you touch an enemy.
     {
         if (collider.gameObject.CompareTag("Enemy"))
         {
-            health = health - 1;
+            currentHealth = currentHealth - 1;
+            //cameraShake.Shake();
+            HealthBar.SetHealth(currentHealth);
         }
     }
-    /*
-    void OnTriggerEnter2D(Collider2D collider) //Camera shake when hit?
-    {
-        if (collider.gameObject.CompareTag("Enemy"))
-        {
-            
-        }
-    }
-     */
-
+ 
 }

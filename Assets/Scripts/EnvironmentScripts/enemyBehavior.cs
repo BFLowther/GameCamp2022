@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class enemyBehavior : MonoBehaviour
 {
+    private Animator anim;
     public Transform pos1,pos2;
     public Transform startPos;
     public float speedOfEnemy = 1;
     Vector3 nextPos;
     private Vector3 lastPosition;
-    public SpriteRenderer spriteRenderer;
+    //public SpriteRenderer spriteRenderer;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +18,7 @@ public class enemyBehavior : MonoBehaviour
         //Rigidbody m_Rigidbody;
         lastPosition = transform.position;
         nextPos = startPos.position;
-
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -32,7 +33,7 @@ public class enemyBehavior : MonoBehaviour
             nextPos = pos1.position;
         }
         transform.position = Vector3.MoveTowards(transform.position, nextPos, speedOfEnemy * Time.deltaTime); //Movement!
-
+        anim.SetFloat("Speed", speedOfEnemy);
         spriteRenderer.flipX = ((transform.position - lastPosition).x > 0.0f);
         lastPosition = transform.position;
     }

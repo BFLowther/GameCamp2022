@@ -24,8 +24,8 @@ public class Damage : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
-            pb.health -= 1;
-        if (pb.health == 0)
+            pb.currentHealth -= 1;
+        if (pb.currentHealth == 0)
             SceneManager.LoadScene("Ross2");
     }
 
