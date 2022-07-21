@@ -19,6 +19,8 @@ public class playerBehavior : MonoBehaviour
 
     public bool isFacingRight;
 
+    public float maxY;
+
     public GameObject obstacleRayObjectLeft;
     public GameObject obstacleRayObjectRight;
     private GameObject obstacleRayObject;
@@ -33,6 +35,7 @@ public class playerBehavior : MonoBehaviour
     }
     void Update()
     {
+        body.velocity = new Vector2(body.velocity.x, Mathf.Clamp(body.velocity.y, -maxY, maxY));
         
         //Debug.DrawRay(transform.position, forward, Color.green);
         body.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, body.velocity.y); //Horizontal movement.
