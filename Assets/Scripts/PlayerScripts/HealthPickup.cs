@@ -4,28 +4,22 @@ using UnityEngine;
 
 public class HealthPickup : MonoBehaviour
 {
-    public int potion = 1;
-    public GameObject Player;
+    public int healthgain = 1;
     public playerBehavior pb;
 
     // Start is called before the first frame update
     void Start()
     {
-        pb = Player.GetComponent<playerBehavior>();
+        pb = gameObject.GetComponent<playerBehavior>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("potion"))
+        if (other.gameObject.CompareTag("healthgain"))
         {
-            pb.currentHealth += potion;
+            pb.currentHealth += healthgain;
             other.transform.gameObject.SetActive(false);
-            other.gameObject.tag = "Untagged";
+            //other.gameObject.tag = "Untagged";
             Destroy(other.gameObject);
         }
     }

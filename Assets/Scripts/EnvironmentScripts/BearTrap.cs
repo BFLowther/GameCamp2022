@@ -5,31 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class BearTrap : MonoBehaviour
 {
+    //[HideInInspector]
+    private playerBehavior pb;
     [HideInInspector]
-    public playerBehavior pb;
-    [HideInInspector]
-    public Rigidbody2D rigi;
+    private Rigidbody2D rigi;
     public Animator anim;
 
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
-    }
-
-    IEnumerator Trapped()
-    {
-        //Print the time of when the function is first called.
-        Debug.Log("Started Coroutine at timestamp : " + Time.time);
-
-        //yield on a new YieldInstruction that waits for 5 seconds.
-        yield return new WaitForSeconds(5);
-
-        //After we have waited 5 seconds print the time again.
-        rigi.constraints = RigidbodyConstraints2D.None;
-        rigi.constraints = RigidbodyConstraints2D.FreezeRotation;
-        Debug.Log("Finished Coroutine at timestamp : " + Time.time);
-        //Open trap
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -40,11 +25,30 @@ public class BearTrap : MonoBehaviour
             pb = other.gameObject.GetComponent<playerBehavior>();
             rigi = other.gameObject.GetComponent<Rigidbody2D>();
             pb.currentHealth -= 1;
+            Debug.Log("-1 Health");
             anim.Play("BearTrap");
             rigi.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
             StartCoroutine(Trapped());
             if (pb.currentHealth == 0)
                 SceneManager.LoadScene("Ross2");
+        }
+    }
+    private IEnumerator Trapped()
+    {
+        while (true)
+        {
+            //Print the time of when the function is first called.
+            Debug.Log("Started Coroutine at timestamp : " + Time.time);
+
+            //yield on a new YieldInstruction that waits for 5 seconds.
+            yield return new WaitForSeconds(5);
+
+            //After we have waited 5 seconds print the time again.
+            rigi.constraints = RigidbodyConstraints2D.None;
+            rigi.constraints = RigidbodyConstraints2D.FreezeRotation;
+            Debug.Log("Finished Coroutine at timestamp : " + Time.time);
+            //Open trap
+            break;
         }
     }
 }
