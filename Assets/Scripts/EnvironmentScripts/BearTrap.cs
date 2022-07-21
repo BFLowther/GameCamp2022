@@ -43,13 +43,13 @@ public class BearTrap : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             //Close trap
-            pb.health -= 1;
+            pb.currentHealth -= 1;
             anim.Play("BearTrap");
             rigi.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
             StartCoroutine(Trapped());
         }
         
-        if (pb.health == 0)
+        if (pb.currentHealth == 0)
             SceneManager.LoadScene("Ross2");
     }
 }

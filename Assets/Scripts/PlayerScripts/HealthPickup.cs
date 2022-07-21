@@ -23,7 +23,7 @@ public class HealthPickup : MonoBehaviour
     {
         if (other.gameObject.CompareTag("potion"))
         {
-            pb.health += potion;
+            pb.currentHealth += potion;
             other.transform.gameObject.SetActive(false);
             other.gameObject.tag = "Untagged";
             Destroy(other.gameObject);

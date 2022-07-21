@@ -9,7 +9,7 @@ public class enemyBehavior : MonoBehaviour
     public float speedOfEnemy = 1;
     Vector3 nextPos;
     private Vector3 lastPosition;
-    public SpriteRenderer spriteRenderer;
+    //public SpriteRenderer spriteRenderer;
 
     // Start is called before the first frame update
     void Start()
@@ -33,7 +33,7 @@ public class enemyBehavior : MonoBehaviour
         }
         transform.position = Vector3.MoveTowards(transform.position, nextPos, speedOfEnemy * Time.deltaTime); //Movement!
 
-        spriteRenderer.flipX = ((transform.position - lastPosition).x > 0.0f);
+        //spriteRenderer.flipX = ((transform.position - lastPosition).x > 0.0f);
         lastPosition = transform.position;
     }
 }
