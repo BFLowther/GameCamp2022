@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class enemyBehavior : MonoBehaviour
 {
+    private Animator anim;
     public Transform pos1,pos2;
     public Transform startPos;
     public float speedOfEnemy = 1;
@@ -17,7 +18,7 @@ public class enemyBehavior : MonoBehaviour
         //Rigidbody m_Rigidbody;
         lastPosition = transform.position;
         nextPos = startPos.position;
-
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -32,8 +33,8 @@ public class enemyBehavior : MonoBehaviour
             nextPos = pos1.position;
         }
         transform.position = Vector3.MoveTowards(transform.position, nextPos, speedOfEnemy * Time.deltaTime); //Movement!
-
-        //spriteRenderer.flipX = ((transform.position - lastPosition).x > 0.0f);
+        anim.SetFloat("Speed", speedOfEnemy);
+        spriteRenderer.flipX = ((transform.position - lastPosition).x > 0.0f);
         lastPosition = transform.position;
     }
 }

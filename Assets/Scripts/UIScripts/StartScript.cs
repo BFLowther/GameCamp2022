@@ -9,6 +9,7 @@ public class StartScript : MonoBehaviour
     Scene scene;
     public Animator anim;
     public GameObject optionsMenu;
+    public GameObject creditsMenu;
     
     void Start()
     {
@@ -36,6 +37,12 @@ public class StartScript : MonoBehaviour
     public void optionsBack()
     {    
         optionsMenu.SetActive(false);
+    }
+
+    public void creditsBack()
+    {
+        creditsMenu.SetActive(false);
+
     }
 
     IEnumerator ExampleCoroutine()
