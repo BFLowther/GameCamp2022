@@ -15,7 +15,7 @@ public class HealthPickup : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("potion"))
+        if (other.gameObject.CompareTag("healthgain"))
         {
             pb.HealthBar.SetHealth(healthgain + pb.HealthBar.currentHealth);
             other.transform.gameObject.SetActive(false);
