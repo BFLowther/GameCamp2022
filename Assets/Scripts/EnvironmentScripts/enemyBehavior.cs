@@ -12,9 +12,12 @@ public class enemyBehavior : MonoBehaviour
     private Vector3 lastPosition;
     public SpriteRenderer spriteRenderer;
 
+   
+
     // Start is called before the first frame update
     void Start()
     {
+        
         //Rigidbody m_Rigidbody;
         lastPosition = transform.position;
         nextPos = startPos.position;
@@ -35,6 +38,7 @@ public class enemyBehavior : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, nextPos, speedOfEnemy * Time.deltaTime); //Movement!
         anim.SetFloat("Speed", speedOfEnemy);
         spriteRenderer.flipX = ((transform.position - lastPosition).x > 0.0f);
+
         lastPosition = transform.position;
     }
 }

@@ -10,7 +10,7 @@ TagManager:
   - Ground
   - Enemy
   - Bullet
-  - potion
+  - healthgain
   layers:
   - Default
   - TransparentFX
