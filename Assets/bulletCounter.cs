@@ -12,6 +12,6 @@ public class bulletCounter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        text.text = "" + player.RangedWeapons.bulletPack.bullets;
+        text.text = "Bullets Left:" + player.RangedWeapons.bulletPack.bullets;
     }
 }
