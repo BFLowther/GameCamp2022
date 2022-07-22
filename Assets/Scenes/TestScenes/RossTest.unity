@@ -1456,10 +1456,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DestructableDoor
       objectReference: {fileID: 0}
-    - target: {fileID: 7513259869240850706, guid: 6fb8f0462acd9224d915500892dd5ad0, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7513259869240850710, guid: 6fb8f0462acd9224d915500892dd5ad0, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -1516,14 +1512,6 @@ PrefabInstance:
     - target: {fileID: 8463100532534481352, guid: 6b94cfba319249a4ebc02174cc706d99, type: 3}
       propertyPath: m_Name
       value: OpenableDoor
-      objectReference: {fileID: 0}
-    - target: {fileID: 8463100532534481352, guid: 6b94cfba319249a4ebc02174cc706d99, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8463100532534481358, guid: 6b94cfba319249a4ebc02174cc706d99, type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8463100532534481362, guid: 6b94cfba319249a4ebc02174cc706d99, type: 3}
       propertyPath: m_RootOrder
