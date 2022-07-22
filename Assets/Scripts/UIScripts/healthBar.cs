@@ -5,12 +5,13 @@ using UnityEngine.UI;
 public class healthBar : MonoBehaviour
 {
     public int currentHealth;
+    
     public Slider slider;
 
    public void SetHealth(int health)
     {
         currentHealth = health;
-        slider.value = currentHealth;
+        slider.value = health;
     }
 
    public void SetMaxHealth(int health)

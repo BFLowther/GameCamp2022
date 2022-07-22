@@ -6,8 +6,9 @@ public class playerBehavior : MonoBehaviour
 {
     public int currentHealth;
     public Rigidbody2D body;
+    public rangedWeapons RangedWeapons;
     // Start is called before the first frame update
-  
+
     public float speed = 7;
 
     public float jump = 3;
@@ -41,6 +42,7 @@ public class playerBehavior : MonoBehaviour
     {
         currentHealth = maxHealth;
         HealthBar.SetMaxHealth(maxHealth);
+        HealthBar.SetHealth(maxHealth);
         anim = gameObject.GetComponent<Animator>();
     }
     private void Awake()
