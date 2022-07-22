@@ -7,6 +7,7 @@ public class playerBehavior : MonoBehaviour
     public int currentHealth;
     public Rigidbody2D body;
     public rangedWeapons RangedWeapons;
+    public SpriteRenderer spriteRenderer;
     // Start is called before the first frame update
 
     public float speed = 7;
@@ -44,6 +45,7 @@ public class playerBehavior : MonoBehaviour
         HealthBar.SetMaxHealth(maxHealth);
         HealthBar.SetHealth(maxHealth);
         anim = gameObject.GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
     private void Awake()
     {
@@ -62,6 +64,7 @@ public class playerBehavior : MonoBehaviour
             obstacleRayObject = obstacleRayObjectRight;
             anim.SetFloat("walk", body.velocity.x);
             anim.SetBool("Flip", false);
+            spriteRenderer.flipX = false;
 
         }
         if (Input.GetAxis("Horizontal") < 0.0f)
@@ -70,6 +73,7 @@ public class playerBehavior : MonoBehaviour
             obstacleRayObject = obstacleRayObjectLeft;
             anim.SetFloat("walk", body.velocity.x);
             anim.SetBool("Flip", true);
+            spriteRenderer.flipX = true;
         }
 
         if (currentHealth <= 0) //You die if you reach 0 health.
