@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 256
+  spritePixelsToUnits: 128
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -119,10 +119,10 @@ TextureImporter:
       name: Main Character Idle animation_0
       rect:
         serializedVersion: 2
-        x: 125
-        y: 1023
-        width: 260
-        height: 491
+        x: 0
+        y: 1024
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,10 +140,10 @@ TextureImporter:
       name: Main Character Idle animation_1
       rect:
         serializedVersion: 2
-        x: 637
-        y: 1023
-        width: 260
-        height: 491
+        x: 512
+        y: 1024
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,10 +161,10 @@ TextureImporter:
       name: Main Character Idle animation_2
       rect:
         serializedVersion: 2
-        x: 1149
-        y: 1023
-        width: 260
-        height: 491
+        x: 1024
+        y: 1024
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,10 +182,10 @@ TextureImporter:
       name: Main Character Idle animation_3
       rect:
         serializedVersion: 2
-        x: 130
+        x: 0
         y: 512
-        width: 259
-        height: 490
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,10 +203,10 @@ TextureImporter:
       name: Main Character Idle animation_4
       rect:
         serializedVersion: 2
-        x: 642
+        x: 512
         y: 512
-        width: 259
-        height: 490
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,10 +224,10 @@ TextureImporter:
       name: Main Character Idle animation_5
       rect:
         serializedVersion: 2
-        x: 1154
+        x: 1024
         y: 512
-        width: 259
-        height: 490
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -245,10 +245,10 @@ TextureImporter:
       name: Main Character Idle animation_6
       rect:
         serializedVersion: 2
-        x: 128
+        x: 0
         y: 0
-        width: 263
-        height: 489
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

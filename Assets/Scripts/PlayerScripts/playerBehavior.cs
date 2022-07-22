@@ -53,18 +53,20 @@ public class playerBehavior : MonoBehaviour
     {
         body.velocity = new Vector2(body.velocity.x, Mathf.Clamp(body.velocity.y, -maxY, maxY));
         
-        anim.SetFloat("walk", body.velocity.x);
+        
         //Debug.DrawRay(transform.position, forward, Color.green);
         body.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, body.velocity.y); //Horizontal movement.
         if (Input.GetAxis("Horizontal") > 0.0f)
         {
             characterDirection = 1.0f;
             obstacleRayObject = obstacleRayObjectRight;
+            anim.SetFloat("walk", body.velocity.x);
         }
         if (Input.GetAxis("Horizontal") < 0.0f)
         {
             characterDirection = -1.0f;
             obstacleRayObject = obstacleRayObjectLeft;
+            anim.SetFloat("walk", -body.velocity.x);
         }
 
         if (currentHealth <= 0) //You die if you reach 0 health.
