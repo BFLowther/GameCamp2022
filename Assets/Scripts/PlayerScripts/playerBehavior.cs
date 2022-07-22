@@ -126,6 +126,10 @@ public class playerBehavior : MonoBehaviour
             currentHealth = currentHealth - 1;
             //cameraShake.Shake();
             HealthBar.SetHealth(currentHealth);
+            if (GetComponent<AudioSource>() != null)
+            {
+                GetComponent<AudioSource>().Play();
+            }
         }
     }
  
