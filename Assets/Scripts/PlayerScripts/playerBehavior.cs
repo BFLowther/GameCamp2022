@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class playerBehavior : MonoBehaviour
 {
-
+    public int currentHealth;
     public Rigidbody2D body;
     // Start is called before the first frame update
   
@@ -13,8 +13,6 @@ public class playerBehavior : MonoBehaviour
     public float jump = 3;
 
     public int maxHealth = 10;
-
-    public int currentHealth;
 
     public float characterDirection;
 
@@ -40,9 +38,7 @@ public class playerBehavior : MonoBehaviour
       void Start()
     {
         currentHealth = maxHealth;
-
-        if (HealthBar)
-            HealthBar.SetMaxHealth(maxHealth);
+        HealthBar.SetMaxHealth(maxHealth);
     }
     private void Awake()
     {
@@ -77,7 +73,7 @@ public class playerBehavior : MonoBehaviour
             obstacleRayObject.transform.position.z
            );
 
-        RaycastHit2D hitObstacle = Physics2D.Raycast(hitPos, Vector2.right * new Vector2(characterDirection,0f), obstacleRayDistance);
+        RaycastHit2D hitObstacle = Physics2D.Raycast(hitPos, Vector2.right * new Vector2(characterDirection,0f), obstacleRayDistance); //Raycast!
 
         if (hitObstacle.collider != null)
         {
@@ -119,8 +115,7 @@ public class playerBehavior : MonoBehaviour
         {
             currentHealth = currentHealth - 1;
             //cameraShake.Shake();
-            if (HealthBar)
-                HealthBar.SetHealth(currentHealth);
+            HealthBar.SetHealth(currentHealth);
         }
     }
  
