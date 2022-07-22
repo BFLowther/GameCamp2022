@@ -166,6 +166,7 @@ MonoBehaviour:
   firePoint: {fileID: 4131652018376661535}
   bulletGO: {fileID: 5574769431618307093, guid: 431daef5f7157f046a98a3ed219eaf9b, type: 3}
   bulletPack: {fileID: 0}
+  hideFlashPercent: 0.9
   lifeTime: 3
   cooldownTime: 0.5
 --- !u!1 &5320316902098844476

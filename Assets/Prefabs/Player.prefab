@@ -301,7 +301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d91f92ecf0d3da42b125382ab14fc3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullets: 1
+  bullets: 10
   bulletCase: 10
 --- !u!114 &2765826605893573847
 MonoBehaviour:
