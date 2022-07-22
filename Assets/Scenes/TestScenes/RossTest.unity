@@ -652,7 +652,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1055976520
 Transform:
   m_ObjectHideFlags: 0
@@ -762,6 +762,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4159436496426443352, guid: 3128c756e2c65e143814a75905441946, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4159436496426443352, guid: 3128c756e2c65e143814a75905441946, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4159436496426443352, guid: 3128c756e2c65e143814a75905441946, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4159436496426443353, guid: 3128c756e2c65e143814a75905441946, type: 3}
       propertyPath: player
       value: 
@@ -1250,7 +1262,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &1580932865
 Animator:
   serializedVersion: 4
@@ -1462,6 +1474,10 @@ PrefabInstance:
     - target: {fileID: 2278619147021776788, guid: d8e11361dcdd1a841b3a170f276b6d72, type: 3}
       propertyPath: m_Name
       value: GhostPie
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278619147021776788, guid: d8e11361dcdd1a841b3a170f276b6d72, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2278619147021776790, guid: d8e11361dcdd1a841b3a170f276b6d72, type: 3}
       propertyPath: m_WasSpriteAssigned
@@ -1804,6 +1820,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Torch
       objectReference: {fileID: 0}
+    - target: {fileID: 8896623237672182556, guid: fc751195b0b55ff429ee69f9fc455e34, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc751195b0b55ff429ee69f9fc455e34, type: 3}
 --- !u!1001 &8463100532672323874
@@ -1873,6 +1893,10 @@ PrefabInstance:
     - target: {fileID: 571188115690950901, guid: e712572321d029c4089c8ccde8a91cd2, type: 3}
       propertyPath: m_Name
       value: Ghost3
+      objectReference: {fileID: 0}
+    - target: {fileID: 571188115690950901, guid: e712572321d029c4089c8ccde8a91cd2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2230799773360229601, guid: e712572321d029c4089c8ccde8a91cd2, type: 3}
       propertyPath: m_RootOrder
