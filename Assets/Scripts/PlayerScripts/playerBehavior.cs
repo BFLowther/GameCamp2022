@@ -32,6 +32,8 @@ public class playerBehavior : MonoBehaviour
 
     public healthBar HealthBar;
 
+    private Animator anim;
+
     
 
 
@@ -39,6 +41,7 @@ public class playerBehavior : MonoBehaviour
     {
         currentHealth = maxHealth;
         HealthBar.SetMaxHealth(maxHealth);
+        anim = gameObject.GetComponent<Animator>();
     }
     private void Awake()
     {
@@ -48,6 +51,7 @@ public class playerBehavior : MonoBehaviour
     {
         body.velocity = new Vector2(body.velocity.x, Mathf.Clamp(body.velocity.y, -maxY, maxY));
         
+        anim.SetFloat("walk", body.velocity.x);
         //Debug.DrawRay(transform.position, forward, Color.green);
         body.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, body.velocity.y); //Horizontal movement.
         if (Input.GetAxis("Horizontal") > 0.0f)
@@ -86,6 +90,8 @@ public class playerBehavior : MonoBehaviour
             }
             
         }
+        if (currentHealth > maxHealth)
+            currentHealth = maxHealth;
 
     }
     void OnTriggerStay2D(Collider2D collider) //Makes character leave the ground.

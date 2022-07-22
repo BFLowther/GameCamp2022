@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 388373484439563593}
   - component: {fileID: 388373484439563598}
   - component: {fileID: 388373484439563599}
+  - component: {fileID: 2444907630818890748}
   m_Layer: 0
   m_Name: Very Bad Health Potion
   m_TagString: potion
@@ -111,3 +112,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5571165, y: 1.2081776}
   m_EdgeRadius: 0
+--- !u!114 &2444907630818890748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388373484439563596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 720a07f452560234dbe0ca8009fe92a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthgain: 1
+  pb: {fileID: 0}

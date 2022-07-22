@@ -10,19 +10,28 @@ public class TreasureChest : MonoBehaviour
     public GameObject potion;
     // Start is called before the first frame update
     public Animator anim;
-    
 
-    void OnTriggerEnter(Collider other) //Check for the player.
+    private bool colliding = false;
+
+
+    private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.E) && colliding == true)
+        {
+            Debug.Log("E");
+            //Play the animation
+            anim.Play("Open");
 
-        if(Input.GetKeyDown(KeyCode.E))
-        { Debug.Log("E");
-        //Play the animation
-        anim.Play("Open");
-        
-        //Spawn the health potion using Istantiation.
-        potion = Instantiate(potion, transform.position, transform.rotation);
-       
+            //Spawn the health potion using Istantiation.
+            potion = Instantiate(potion, transform.position + new Vector3(0, 1, 0), transform.rotation);
         }
+    }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        colliding = true;
+    }
+    void OnTriggerExit2D(Collider2D other)
+    {
+        colliding = false;
     }
 }

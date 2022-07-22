@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 3529372659196777226}
   - component: {fileID: 3529372659196777230}
   - component: {fileID: 54030316476802308}
+  - component: {fileID: 2765826605893573847}
   - component: {fileID: 2034477673}
   m_Layer: 0
   m_Name: Player
@@ -272,15 +273,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38e5c2b87e80bb546b3edd86b71f8b33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHealth: 0
   body: {fileID: 3529372659196777226}
   speed: 10
   jump: 7
-  health: 3
+  maxHealth: 10
   characterDirection: 0
   isFacingRight: 0
+  maxY: 0
   obstacleRayObjectLeft: {fileID: 2005682227}
   obstacleRayObjectRight: {fileID: 1960761745}
+  cameraShake: {fileID: 0}
   obstacleRayDistance: 0
+  HealthBar: {fileID: 0}
 --- !u!114 &54030316476802308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -295,6 +300,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullets: 1
   bulletCase: 10
+--- !u!114 &2765826605893573847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3529372659196777227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 720a07f452560234dbe0ca8009fe92a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthgain: 1
+  pb: {fileID: 0}
 --- !u!70 &2034477673
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
