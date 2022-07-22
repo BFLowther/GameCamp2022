@@ -27,7 +27,7 @@ public class BearTrap : MonoBehaviour
             pb = other.gameObject.GetComponent<playerBehavior>();
             healthBar hb = pb.HealthBar;
             rigi = other.gameObject.GetComponent<Rigidbody2D>();
-            hb.currentHealth -= 1;
+            hb.SetHealth(hb.currentHealth - 1);
             Debug.Log("-1 Health");
             anim.Play("BearTrap");
             rigi.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;

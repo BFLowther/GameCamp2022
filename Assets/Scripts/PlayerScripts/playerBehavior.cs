@@ -39,6 +39,7 @@ public class playerBehavior : MonoBehaviour
     {
         currentHealth = maxHealth;
         HealthBar.SetMaxHealth(maxHealth);
+        HealthBar.SetHealth(maxHealth);
     }
     private void Awake()
     {
