@@ -12,4 +12,9 @@ public class SceneLoader : MonoBehaviour
         scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.buildIndex + 1);
     }
+    public void backToStartChange()
+    {
+        //Change to next scene
+        SceneManager.LoadScene("StartScene");
+    }
 }
