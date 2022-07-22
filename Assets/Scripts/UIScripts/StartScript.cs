@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 public class StartScript : MonoBehaviour
 {
 
-    Scene scene;
     public Animator anim;
+    public Animator transitionAnim;
     public GameObject optionsMenu;
     public GameObject creditsMenu;
     
@@ -19,13 +19,12 @@ public class StartScript : MonoBehaviour
    public void playButton()
     {
         //Play Animation
-        anim.SetTrigger("Play");
+        //anim.SetTrigger("Play");
+        transitionAnim.SetTrigger("endScene");
 
         //Start the coroutine we define below named ExampleCoroutine.
-        StartCoroutine(ExampleCoroutine());
-        //Change to next scene
-        scene = SceneManager.GetActiveScene();
-        
+        //StartCoroutine(ExampleCoroutine());
+
     }
     public void quitButton()
     {
@@ -53,7 +52,6 @@ public class StartScript : MonoBehaviour
         //yield on a new YieldInstruction that waits for 5 seconds.
         yield return new WaitForSeconds(2.0f);
 
-        SceneManager.LoadScene(scene.buildIndex + 1);
 
         //After we have waited 5 seconds print the time again.
         Debug.Log("Finished Coroutine at timestamp : " + Time.time);
