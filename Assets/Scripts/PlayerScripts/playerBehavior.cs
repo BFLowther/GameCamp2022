@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class playerBehavior : MonoBehaviour
 {
-
+    public int currentHealth;
     public Rigidbody2D body;
+    public rangedWeapons RangedWeapons;
+    public SpriteRenderer spriteRenderer;
     // Start is called before the first frame update
-  
+
     public float speed = 7;
 
     public float jump = 3;
 
     public int maxHealth = 10;
-
-    public int currentHealth;
 
     public float characterDirection;
 
@@ -34,15 +34,18 @@ public class playerBehavior : MonoBehaviour
 
     public healthBar HealthBar;
 
+    private Animator anim;
+
     
 
 
       void Start()
     {
         currentHealth = maxHealth;
-
-        if (HealthBar)
-            HealthBar.SetMaxHealth(maxHealth);
+        HealthBar.SetMaxHealth(maxHealth);
+        HealthBar.SetHealth(maxHealth);
+        anim = gameObject.GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
     private void Awake()
     {
@@ -52,18 +55,27 @@ public class playerBehavior : MonoBehaviour
     {
         body.velocity = new Vector2(body.velocity.x, Mathf.Clamp(body.velocity.y, -maxY, maxY));
         
+        
         //Debug.DrawRay(transform.position, forward, Color.green);
         body.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, body.velocity.y); //Horizontal movement.
         if (Input.GetAxis("Horizontal") > 0.0f)
         {
             characterDirection = 1.0f;
             obstacleRayObject = obstacleRayObjectRight;
+            anim.SetFloat("walk", body.velocity.x);
+            anim.SetBool("Flip", false);
+            spriteRenderer.flipX = false;
+
         }
         if (Input.GetAxis("Horizontal") < 0.0f)
         {
             characterDirection = -1.0f;
             obstacleRayObject = obstacleRayObjectLeft;
+            anim.SetFloat("walk", body.velocity.x);
+            anim.SetBool("Flip", true);
+            spriteRenderer.flipX = true;
         }
+        anim.SetFloat("walk", body.velocity.x);
 
         if (currentHealth <= 0) //You die if you reach 0 health.
         {
@@ -77,7 +89,7 @@ public class playerBehavior : MonoBehaviour
             obstacleRayObject.transform.position.z
            );
 
-        RaycastHit2D hitObstacle = Physics2D.Raycast(hitPos, Vector2.right * new Vector2(characterDirection,0f), obstacleRayDistance);
+        RaycastHit2D hitObstacle = Physics2D.Raycast(hitPos, Vector2.right * new Vector2(characterDirection,0f), obstacleRayDistance); //Raycast!
 
         if (hitObstacle.collider != null)
         {
@@ -90,6 +102,8 @@ public class playerBehavior : MonoBehaviour
             }
             
         }
+        if (currentHealth > maxHealth)
+            currentHealth = maxHealth;
 
     }
     void OnTriggerStay2D(Collider2D collider) //Makes character leave the ground.
@@ -119,8 +133,11 @@ public class playerBehavior : MonoBehaviour
         {
             currentHealth = currentHealth - 1;
             //cameraShake.Shake();
-            if (HealthBar)
-                HealthBar.SetHealth(currentHealth);
+            HealthBar.SetHealth(currentHealth);
+            if (GetComponent<AudioSource>() != null)
+            {
+                GetComponent<AudioSource>().Play();
+            }
         }
     }
  

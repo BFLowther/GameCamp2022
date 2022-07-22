@@ -13,9 +13,13 @@ public class Damage : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             pb = other.gameObject.GetComponent<playerBehavior>();
-            pb.currentHealth -= 1;
+            healthBar hb = pb.HealthBar;
+            hb.SetHealth(hb.currentHealth - 1);
             if (pb.currentHealth == 0)
+            {
                 SceneManager.LoadScene("Ross2");
+
+            }
         }
     }
 

@@ -21,16 +21,20 @@ public class BearTrap : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            
+            Debug.Log("aaaaaa you got bear trapped lmao");
             //Close trap
             pb = other.gameObject.GetComponent<playerBehavior>();
+            healthBar hb = pb.HealthBar;
             rigi = other.gameObject.GetComponent<Rigidbody2D>();
-            pb.currentHealth -= 1;
+            hb.SetHealth(hb.currentHealth - 1);
             Debug.Log("-1 Health");
             anim.Play("BearTrap");
             rigi.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
             StartCoroutine(Trapped());
-            if (pb.currentHealth == 0)
+            if (hb.currentHealth == 0)
                 SceneManager.LoadScene("Ross2");
+
         }
     }
     private IEnumerator Trapped()

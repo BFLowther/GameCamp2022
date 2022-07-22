@@ -226,7 +226,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pos1: {fileID: 5824801534608003610}
   pos2: {fileID: 5824801533063567811}
-  speedOfEnemy: 1
+  speedOfEnemy: 4
 --- !u!61 &5824801533963479254
 BoxCollider2D:
   m_ObjectHideFlags: 0
