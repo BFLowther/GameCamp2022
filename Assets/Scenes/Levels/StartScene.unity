@@ -605,5 +605,17 @@ PrefabInstance:
       propertyPath: masterVal
       value: 
       objectReference: {fileID: 1559522233}
+    - target: {fileID: 8543725876778161239, guid: d8600053ca4126244afaa066a7460256, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543725876778161239, guid: d8600053ca4126244afaa066a7460256, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 57fc4c63f95271940972cadb104a5f1f, type: 3}
+    - target: {fileID: 8543725876778161239, guid: d8600053ca4126244afaa066a7460256, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -388085154315347951, guid: 31b3953f255fd6b4c8e073522f731e54, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8600053ca4126244afaa066a7460256, type: 3}

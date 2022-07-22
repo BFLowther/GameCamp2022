@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/StartScene.unity
     guid: b64cbd58ed549fb46b0514486bee8ed0
   - enabled: 1
+    path: Assets/Scenes/TestScenes/Level1.unity
+    guid: 6be94e2c41435e941b94d928f9dd621a
+  - enabled: 1
     path: Assets/Scenes/TestScenes/Michael Ui Tests/Michael Test Scene 2.unity
     guid: 03dae0216e594674da98b992b1e40459
   - enabled: 1
@@ -20,7 +23,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TestScenes/Ross2.unity
     guid: 00d38f61a34db22429dd73341c58559b
-  - enabled: 1
-    path: Assets/Scenes/TestScenes/Level1.unity
-    guid: 6be94e2c41435e941b94d928f9dd621a
   m_configObjects: {}
