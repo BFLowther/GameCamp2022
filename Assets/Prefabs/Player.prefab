@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 3529372658606465234}
   - component: {fileID: 3529372658606465237}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Collector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -107,7 +107,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.010622084, y: 0.20941019}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -118,7 +118,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.3056282, y: 2.9255939}
   m_EdgeRadius: 0
 --- !u!1 &3529372659196777227
 GameObject:
@@ -137,7 +137,6 @@ GameObject:
   - component: {fileID: 2765826605893573847}
   - component: {fileID: 2034477673}
   - component: {fileID: 1151106092}
-  - component: {fileID: 1151106091}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -233,7 +232,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.0625, y: 4.0625}
+    oldSize: {x: 2.03125, y: 2.03125}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -278,6 +277,7 @@ MonoBehaviour:
   currentHealth: 0
   body: {fileID: 3529372659196777226}
   RangedWeapons: {fileID: 2169343521693829719}
+  spriteRenderer: {fileID: 0}
   speed: 10
   jump: 14
   maxHealth: 10
@@ -330,8 +330,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 1}
+  m_Offset: {x: 0, y: -0.02}
+  m_Size: {x: 0.5, y: 2}
   m_Direction: 0
 --- !u!95 &1151106092
 Animator:
@@ -353,20 +353,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1151106091
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3529372659196777227}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 720a07f452560234dbe0ca8009fe92a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthgain: 1
-  pb: {fileID: 0}
 --- !u!1001 &2233303947957854917
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -422,9 +408,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1842105862378121149, guid: 9fb21a6c7ad3d414f960d8e8c8216dd0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842105862378121149, guid: 9fb21a6c7ad3d414f960d8e8c8216dd0, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842105862378121149, guid: 9fb21a6c7ad3d414f960d8e8c8216dd0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842105862378121149, guid: 9fb21a6c7ad3d414f960d8e8c8216dd0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 4145367666720763962, guid: 9fb21a6c7ad3d414f960d8e8c8216dd0, type: 3}
       propertyPath: m_Name
       value: Pistol
+      objectReference: {fileID: 0}
+    - target: {fileID: 5791732751107214635, guid: 9fb21a6c7ad3d414f960d8e8c8216dd0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6039946800046207226, guid: 9fb21a6c7ad3d414f960d8e8c8216dd0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8838961874005214225, guid: 9fb21a6c7ad3d414f960d8e8c8216dd0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.629
+      objectReference: {fileID: 0}
+    - target: {fileID: 8838961874005214225, guid: 9fb21a6c7ad3d414f960d8e8c8216dd0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.296
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9fb21a6c7ad3d414f960d8e8c8216dd0, type: 3}
