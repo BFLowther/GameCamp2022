@@ -17,7 +17,7 @@ public class HealthPickup : MonoBehaviour
     {
         if (other.gameObject.CompareTag("potion"))
         {
-            pb.currentHealth += healthgain;
+            pb.HealthBar.SetHealth(healthgain + pb.HealthBar.currentHealth);
             other.transform.gameObject.SetActive(false);
             //other.gameObject.tag = "Untagged";
             Destroy(other.gameObject);
