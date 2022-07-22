@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 3529372658606465234}
   - component: {fileID: 3529372658606465237}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Collector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -107,7 +107,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.085627615, y: -0.8243677}
+  m_Offset: {x: -0.010622084, y: 0.20941019}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -118,7 +118,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0285426, y: 0.50979817}
+  m_Size: {x: 1.3056282, y: 2.9255939}
   m_EdgeRadius: 0
 --- !u!1 &3529372659196777227
 GameObject:
@@ -330,8 +330,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.4}
-  m_Size: {x: 1, y: 1}
+  m_Offset: {x: 0, y: -0.02}
+  m_Size: {x: 0.5, y: 2}
   m_Direction: 0
 --- !u!95 &1151106092
 Animator:
@@ -408,9 +408,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1842105862378121149, guid: 9fb21a6c7ad3d414f960d8e8c8216dd0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842105862378121149, guid: 9fb21a6c7ad3d414f960d8e8c8216dd0, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842105862378121149, guid: 9fb21a6c7ad3d414f960d8e8c8216dd0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842105862378121149, guid: 9fb21a6c7ad3d414f960d8e8c8216dd0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 4145367666720763962, guid: 9fb21a6c7ad3d414f960d8e8c8216dd0, type: 3}
       propertyPath: m_Name
       value: Pistol
+      objectReference: {fileID: 0}
+    - target: {fileID: 5791732751107214635, guid: 9fb21a6c7ad3d414f960d8e8c8216dd0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6039946800046207226, guid: 9fb21a6c7ad3d414f960d8e8c8216dd0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8838961874005214225, guid: 9fb21a6c7ad3d414f960d8e8c8216dd0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.629
+      objectReference: {fileID: 0}
+    - target: {fileID: 8838961874005214225, guid: 9fb21a6c7ad3d414f960d8e8c8216dd0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.296
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9fb21a6c7ad3d414f960d8e8c8216dd0, type: 3}
