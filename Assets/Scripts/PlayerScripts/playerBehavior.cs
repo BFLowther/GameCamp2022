@@ -75,6 +75,7 @@ public class playerBehavior : MonoBehaviour
             anim.SetBool("Flip", true);
             spriteRenderer.flipX = true;
         }
+        anim.SetFloat("walk", body.velocity.x);
 
         if (currentHealth <= 0) //You die if you reach 0 health.
         {
