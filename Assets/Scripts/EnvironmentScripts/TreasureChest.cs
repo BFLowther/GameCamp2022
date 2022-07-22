@@ -28,11 +28,11 @@ public class TreasureChest : MonoBehaviour
         {
             Debug.Log("Open");
             //Play the animation
-            anim.Play("Open");
+            anim.SetTrigger("Chest");
             numOfPotions--; 
 
             //Spawn the health potion using Istantiation.
-            potion = Instantiate(potion, transform.position + new Vector3(0, 1, 0), transform.rotation);
+            Instantiate(potion, transform.position + new Vector3(0, 1, 0), transform.rotation);
         }
     }
     void OnTriggerEnter2D(Collider2D other)
