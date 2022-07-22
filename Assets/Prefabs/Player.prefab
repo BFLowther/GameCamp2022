@@ -272,15 +272,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38e5c2b87e80bb546b3edd86b71f8b33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHealth: 0
   body: {fileID: 3529372659196777226}
+  RangedWeapons: {fileID: 2169343521693829719}
   speed: 10
   jump: 7
-  health: 3
+  maxHealth: 10
   characterDirection: 0
   isFacingRight: 0
+  maxY: 0
   obstacleRayObjectLeft: {fileID: 2005682227}
   obstacleRayObjectRight: {fileID: 1960761745}
+  cameraShake: {fileID: 0}
   obstacleRayDistance: 0
+  HealthBar: {fileID: 0}
 --- !u!114 &54030316476802308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -372,6 +377,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9fb21a6c7ad3d414f960d8e8c8216dd0, type: 3}
+--- !u!114 &2169343521693829719 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 64532999707453586, guid: 9fb21a6c7ad3d414f960d8e8c8216dd0, type: 3}
+  m_PrefabInstance: {fileID: 2233303947957854917}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9b8b12a6fa0e54409372ffe8c274e5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2294766074445695100 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 83017034311756473, guid: 9fb21a6c7ad3d414f960d8e8c8216dd0, type: 3}

@@ -176,7 +176,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.0392475
+  orthographic size: 5.8463187
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -635,11 +635,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -6160527279249069223, guid: 89ca693c74f08a4419c27fb28f139ad1, type: 3}
       propertyPath: damagedEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -6160527279249069223, guid: 89ca693c74f08a4419c27fb28f139ad1, type: 3}
       propertyPath: damagedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -6160527279249069223, guid: 89ca693c74f08a4419c27fb28f139ad1, type: 3}
       propertyPath: damagedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -648,7 +648,7 @@ PrefabInstance:
     - target: {fileID: -6160527279249069223, guid: 89ca693c74f08a4419c27fb28f139ad1, type: 3}
       propertyPath: damagedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1474568665}
+      objectReference: {fileID: 1474568663}
     - target: {fileID: -6160527279249069223, guid: 89ca693c74f08a4419c27fb28f139ad1, type: 3}
       propertyPath: damagedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -663,7 +663,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6160527279249069223, guid: 89ca693c74f08a4419c27fb28f139ad1, type: 3}
       propertyPath: damagedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Damage
+      value: Play
       objectReference: {fileID: 0}
     - target: {fileID: -6160527279249069223, guid: 89ca693c74f08a4419c27fb28f139ad1, type: 3}
       propertyPath: damagedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -671,7 +671,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6160527279249069223, guid: 89ca693c74f08a4419c27fb28f139ad1, type: 3}
       propertyPath: damagedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Health, Assembly-CSharp
+      value: UnityEngine.Animator, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: -6160527279249069223, guid: 89ca693c74f08a4419c27fb28f139ad1, type: 3}
       propertyPath: damagedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -679,11 +679,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6160527279249069223, guid: 89ca693c74f08a4419c27fb28f139ad1, type: 3}
       propertyPath: damagedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -6160527279249069223, guid: 89ca693c74f08a4419c27fb28f139ad1, type: 3}
       propertyPath: damagedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6160527279249069223, guid: 89ca693c74f08a4419c27fb28f139ad1, type: 3}
+      propertyPath: damagedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: EnemyAttack
       objectReference: {fileID: 0}
     - target: {fileID: -6160527279249069223, guid: 89ca693c74f08a4419c27fb28f139ad1, type: 3}
       propertyPath: damagedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
@@ -1300,17 +1304,6 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 1474568663, guid: 89ca693c74f08a4419c27fb28f139ad1, type: 3}
   m_PrefabInstance: {fileID: 723574300}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1474568665 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: -6160527279249069223, guid: 89ca693c74f08a4419c27fb28f139ad1, type: 3}
-  m_PrefabInstance: {fileID: 723574300}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26a31268bb6aca24db0b9f850d32d049, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1848262102
 PrefabInstance:
   m_ObjectHideFlags: 0
