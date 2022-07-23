@@ -11,6 +11,7 @@ public class enemyBehavior : MonoBehaviour
     Vector3 nextPos;
     private Vector3 lastPosition;
     public SpriteRenderer spriteRenderer;
+    public bool bigBoss = false;
 
    
 
@@ -27,6 +28,9 @@ public class enemyBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (bigBoss)
+            return;
+        
         if(transform.position == pos1.position)
         {
             nextPos = pos2.position;
