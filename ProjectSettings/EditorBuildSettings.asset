@@ -24,6 +24,6 @@ EditorBuildSettings:
     path: Assets/Scenes/TestScenes/RossTest.unity
     guid: 08b66dc706ae06940ae33b128ed15e80
   - enabled: 1
-    path: Assets/Scenes/TestScenes/Ross2.unity
+    path: Assets/Scenes/Levels/DeathScene.unity
     guid: 00d38f61a34db22429dd73341c58559b
   m_configObjects: {}
