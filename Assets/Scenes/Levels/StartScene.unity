@@ -442,7 +442,47 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 319587246699485202, guid: 986f6a24c4d3cd4499bf9627d6e225b9, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325709472243678856, guid: 986f6a24c4d3cd4499bf9627d6e225b9, type: 3}
+      propertyPath: m_fontColor.b
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325709472243678856, guid: 986f6a24c4d3cd4499bf9627d6e225b9, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325709472243678856, guid: 986f6a24c4d3cd4499bf9627d6e225b9, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325709472243678856, guid: 986f6a24c4d3cd4499bf9627d6e225b9, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325709472584181997, guid: 986f6a24c4d3cd4499bf9627d6e225b9, type: 3}
+      propertyPath: m_text
+      value: Skelecide
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325709472811827267, guid: 986f6a24c4d3cd4499bf9627d6e225b9, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 129.6476
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325709472811827267, guid: 986f6a24c4d3cd4499bf9627d6e225b9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -310.1762
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325709472811827269, guid: 986f6a24c4d3cd4499bf9627d6e225b9, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325709472811827269, guid: 986f6a24c4d3cd4499bf9627d6e225b9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 985426bbff6368a4f961d955705be2d0, type: 3}
+    - target: {fileID: 4325709472811827269, guid: 986f6a24c4d3cd4499bf9627d6e225b9, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4325709473079238986, guid: 986f6a24c4d3cd4499bf9627d6e225b9, type: 3}
       propertyPath: m_Pivot.x
