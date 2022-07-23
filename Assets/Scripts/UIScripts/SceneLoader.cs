@@ -22,4 +22,8 @@ public class SceneLoader : MonoBehaviour
         //Change to next scene
         SceneManager.LoadScene("StartScene");
     }
+    void OnTriggerEnter2D(Collider2D collider)
+    {
+        fadeAnim();
+    }
 }
