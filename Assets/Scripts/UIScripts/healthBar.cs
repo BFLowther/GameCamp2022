@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 public class healthBar : MonoBehaviour
 {
     public int currentHealth;
@@ -12,6 +14,10 @@ public class healthBar : MonoBehaviour
     {
         currentHealth = health;
         slider.value = health;
+        if (currentHealth <= 0)
+        {
+            SceneManager.LoadScene("Ross2");
+        }
     }
 
    public void SetMaxHealth(int health)
