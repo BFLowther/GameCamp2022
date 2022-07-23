@@ -16,7 +16,7 @@ public class VolumeChange : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        SetSound((masterVal.value * 20), (musicVal.value * 20), (sfxVal.value * 20));
+        SetSound((masterVal.value), (musicVal.value), (sfxVal.value));
         
     }
 
